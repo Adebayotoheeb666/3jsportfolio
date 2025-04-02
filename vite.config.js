@@ -5,7 +5,17 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    target: 'esnext' // 👈 Allows top-level await
+    target: 'esnext',
+    rollupOptions: {
+      output: {
+        format: 'esm' // Ensure ES modules output
+      }
+    }
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'esnext' // Also set for esbuild
+    }
   }
 });
 
