@@ -33,7 +33,7 @@ const Hero = () => {
 
       <div className="w-full max-w-4xl mx-auto mt-8 px-4">
         <img 
-          src="/assets/hero-pics.jpg" 
+          src="/assets/hero-pics.png" 
           alt="Paul's Portfolio" 
           className="w-full h-auto rounded-lg shadow-lg object-cover"
         />
