@@ -25,7 +25,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I’m Adebayo Paul</p>
               <p className="grid-subtext">
-                I a passionate Full-Stack Developer specializing in JavaScript (React & Node.js) and Web design. With 5+ years of experience, I build scalable web apps and open-source tools. When not coding, I mentor junior developers and writes tech blogs. Currently crafting AI-powered solutions at TechNest.
+                I am a passionate Full-Stack Developer specializing in JavaScript (React & Node.js) and Web design. With 5+ years of experience, I build scalable web apps and open-source tools. When not coding, I mentor junior developers and writes tech blogs. Currently crafting AI-powered solutions at TechNest.
               </p>
             </div>
           </div>
