@@ -9,17 +9,17 @@ const Footer = () => {
 
       <div className="flex gap-3">
         <div className="social-icon">
-          <img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" />
+          <img src="https://github.com/Adebayotoheeb666/" alt="github" className="w-1/2 h-1/2" />
         </div>
         <div className="social-icon">
-          <img src="/assets/twitter.svg" alt="twitter" className="w-1/2 h-1/2" />
+          <img src="https://x.com/splusplus111" alt="twitter" className="w-1/2 h-1/2" />
         </div>
         <div className="social-icon">
-          <img src="/assets/instagram.svg" alt="instagram" className="w-1/2 h-1/2" />
+          <img src="https://www.instagram.com/splusplus111/" alt="instagram" className="w-1/2 h-1/2" />
         </div>
       </div>
 
-      <p className="text-white-500">© 2024 Adrian Hajdin. All rights reserved.</p>
+      <p className="text-white-500">© 2024 Adebayo Toheeb. All rights reserved.</p>
     </footer>
   );
 };
