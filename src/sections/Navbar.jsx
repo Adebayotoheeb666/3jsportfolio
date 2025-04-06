@@ -1,53 +1,79 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { navLinks } from '../constants/index.js';
+import { Leva } from 'leva';
+import { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { useMediaQuery } from 'react-responsive';
+import { PerspectiveCamera } from '@react-three/drei';
 
-const NavItems = ({ onClick = () => {} }) => (
-  <ul className="nav-ul">
-    {navLinks.map((item) => (
-      <li key={item.id} className="nav-li">
-        <Link to={item.href} className="nav-li_a" onClick={onClick}>
-          {item.name}
-        </Link>
-      </li>
-    ))}
-  </ul>
-);
+import Cube from '../components/Cube.jsx';
+import Rings from '../components/Rings.jsx';
+import ReactLogo from '../components/ReactLogo.jsx';
+import Button from '../components/Button.jsx';
+import Target from '../components/Target.jsx';
+import CanvasLoader from '../components/Loading.jsx';
+import HeroCamera from '../components/HeroCamera.jsx';
+import { calculateSizes } from '../constants/index.js';
+import { HackerRoom } from '../components/HackerRoom.jsx';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Hero = () => {
+  // Use media queries to determine screen size
+  const isSmall = useMediaQuery({ maxWidth: 440 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const sizes = calculateSizes(isSmall, isMobile, isTablet);
+
+  // Function to handle CV download
+  const handleDownloadCV = () => {
+    // Replace '/path/to/your-cv.pdf' with the actual path to your CV file
+    const cvUrl = '/path/to/your-cv.pdf';
+    
+    // Create a temporary anchor element
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'Paul-CV.pdf'; // The filename you want for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center py-5 mx-auto c-space">
-          <Link to="/" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">
-            Paul
-          </Link>
+    <section className="min-h-screen w-full flex flex-col relative" id="home">
+      <div className="w-full max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-8 px-4 sm:mt-36 mt-20">
+        {/* Text content - floats left */}
+        <div className="flex-1 flex flex-col gap-3">
+          <p className="sm:text-3xl text-xl font-medium text-white text-center sm:text-left font-generalsans">
+            Hi, I am Paul <span className="waving-hand">👋</span>
+          </p>
+          <p className="hero_tag text-gray_gradient text-center sm:text-left">
+            Your vision, my code - let's build something amazing together
+          </p>
+        </div>
 
-          <button
-            onClick={toggleMenu}
-            className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
-            aria-label="Toggle menu">
-            <img src={isOpen ? 'assets/close.svg' : 'assets/menu.svg'} alt="toggle" className="w-6 h-6" />
-          </button>
-
-          <nav className="sm:flex hidden">
-            <NavItems />
-          </nav>
+        {/* Image - floats right */}
+        <div className="flex-1">
+          <img 
+            src="/assets/hero-img.png" 
+            alt="Paul's Portfolio" 
+            className="w-full h-auto rounded-lg shadow-lg object-cover"
+          />
         </div>
       </div>
 
-      <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
-        <nav className="p-5">
-          <NavItems onClick={closeMenu} />
-        </nav>
+      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#about" className="w-full sm:w-fit">
+            <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+          </a>
+          <button 
+            onClick={handleDownloadCV}
+            className="w-full sm:w-fit px-6 py-3 bg-transparent border border-white text-white rounded-lg hover:bg-white hover:text-black transition-colors duration-300 font-medium"
+          >
+            Download CV
+          </button>
+        </div>
       </div>
-    </header>
+    </section>
   );
 };
 
-export default Navbar;
+export default Hero;
