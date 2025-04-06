@@ -20,13 +20,12 @@ const About = () => {
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+            <img src="assets/hero-pics.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">Hi, I’m Adebayo Paul</p>
               <p className="grid-subtext">
-                With 12 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
-                and responsive websites.
+                I am a passionate Full-Stack Developer specializing in JavaScript (React & Node.js) and Web design. With 5+ years of experience, I build scalable web apps and open-source tools. When not coding, I mentor junior developers and writes tech blogs. Currently crafting AI-powered solutions at TechNest.
               </p>
             </div>
           </div>
