@@ -47,7 +47,19 @@ const Hero = () => {
         </div>
       </div>
 
-      
+      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#about" className="w-full sm:w-fit">
+            <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+          </a>
+          <button 
+            onClick={handleDownloadCV}
+            className="w-full sm:w-fit px-6 py-3 bg-transparent border border-white text-white rounded-lg hover:bg-white hover:text-black transition-colors duration-300 font-medium"
+          >
+            Download CV
+          </button>
+        </div>
+      </div>
     </section>
   );
 };
