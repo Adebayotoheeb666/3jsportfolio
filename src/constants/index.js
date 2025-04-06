@@ -7,17 +7,17 @@ export const navLinks = [
   {
     id: 2,
     name: 'About',
-    href: '/src/pages/About.jsx',
+    href: '/about',
   },
   {
     id: 3,
     name: 'Projects',
-    href: '/src/pages/Projects.jsx',
+    href: '/projects',
   },
   {
     id: 4,
     name: 'Contact',
-    href: '/src/pages/Contact.jsx',
+    href: '/contact',
   },
 ];
 
