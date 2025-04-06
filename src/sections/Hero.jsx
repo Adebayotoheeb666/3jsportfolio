@@ -31,11 +31,11 @@ const Hero = () => {
         <p className="hero_tag text-gray_gradient">Your vision, my code - let's build something amazing together</p>
       </div>
 
-      <div className="w-full max-w-4xl mx-auto mt-8 px-4">
+      <div className="w-64 h-64 mx-auto mt-8 overflow-hidden rounded-full shadow-lg">
         <img 
-          src="/assets/hero-pics.png" 
+          src="/assets/hero-img.png" 
           alt="Paul's Portfolio" 
-          className="w-full h-auto rounded-lg shadow-lg object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
 
