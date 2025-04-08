@@ -1,6 +1,8 @@
 import { useMediaQuery } from 'react-responsive';
+
 import Button from '../components/Button.jsx';
 import { calculateSizes } from '../constants/index.js';
+
 
 const Hero = () => {
   // Use media queries to determine screen size

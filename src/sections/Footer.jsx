@@ -8,15 +8,15 @@ const Footer = () => {
       </div>
 
       <div className="flex gap-3">
-        <a href="https://github.com/Adebayotoheeb666/" target="_blank" rel="noopener noreferrer" className="social-icon">
-          <img src="/assets/github.svg" alt="Github" className="w-1/2 h-1/2" />
-        </a>
-        <a href="https://x.com/splusplus111" target="_blank" rel="noopener noreferrer" className="social-icon">
-          <img src="/assets/twitter.svg" alt="Twitter" className="w-1/2 h-1/2" />
-        </a>
-        <a href="https://www.instagram.com/splusplus111/" target="_blank" rel="noopener noreferrer" className="social-icon">
-          <img src="/assets/instagram.svg" alt="Instagram" className="w-1/2 h-1/2" />
-        </a>
+        <div className="social-icon">
+          <img src="https://github.com/Adebayotoheeb666/" alt="github" className="w-1/2 h-1/2" />
+        </div>
+        <div className="social-icon">
+          <img src="https://x.com/VGibson56586" alt="twitter" className="w-1/2 h-1/2" />
+        </div>
+        <div className="social-icon">
+          <img src="/assets/instagram.svg" alt="instagram" className="w-1/2 h-1/2" />
+        </div>
       </div>
 
       <p className="text-white-500">© 2024 Adebayo Toheeb. All rights reserved.</p>

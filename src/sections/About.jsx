@@ -20,12 +20,13 @@ const About = () => {
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/hero-pics.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+            <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">Hi, I’m Adebayo Paul</p>
               <p className="grid-subtext">
-                I am a passionate Full-Stack Developer specializing in JavaScript (React & Node.js) and Web design. With 5+ years of experience, I build scalable web apps and open-source tools. When not coding, I mentor junior developers and writes tech blogs. Currently crafting AI-powered solutions at TechNest.
+                With 12 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
+                and responsive websites.
               </p>
             </div>
           </div>
@@ -33,7 +34,7 @@ const About = () => {
 
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/html-bg.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
+            <img src="assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">Tech Stack</p>
@@ -94,7 +95,7 @@ const About = () => {
               <p className="grid-subtext text-center">Contact me</p>
               <div className="copy-container" onClick={handleCopy}>
                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">adebayotoheeb666@gmail.com</p>
+                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">splusplus111@gmail.com</p>
               </div>
             </div>
           </div>
