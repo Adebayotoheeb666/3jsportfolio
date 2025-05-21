@@ -67,7 +67,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/https://github.com/Adebayotoheeb666/3jsportfolio/.git
+git clone https://github.com/Adebayotoheeb666/3jsportfolio.git
 cd threejscc-portfolio
 ```
 
